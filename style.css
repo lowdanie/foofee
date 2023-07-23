@@ -12,17 +12,14 @@
 
     /* Then we define how is distributed the remaining space */
     justify-content: flex-start;
-    
-    gap: 10px;
+    align-items: center;
+    gap: 25px;
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
 .flex-item {
-    background: rgb(65, 163, 74);
-    width: 200px;
-    height: 200px;
     line-height: 150px;
     color: rgb(238, 251, 239);
     font-weight: bold;
@@ -32,4 +29,8 @@
 
 body {
     background-color:  rgb(187, 236, 192);
+}
+
+img {
+    width: 200px;
 }
