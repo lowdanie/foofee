@@ -1,4 +1,4 @@
-.flex-container {
+.flex-container-flex {
     /* We first create a flex layout context */
     display: flex;
 
@@ -19,18 +19,52 @@
     list-style: none;
 }
 
+.flex-container-cols {
+    display: block;
+    columns: 12rem;
+    gap: 1rem;
+    /* max-width: 900px; */
+}
+
+.flex-container {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 25px;
+    justify-items: center;
+    align-items: center;
+}
+
 .flex-item {
-    line-height: 150px;
-    color: rgb(238, 251, 239);
-    font-weight: bold;
-    font-size: 3em;
-    text-align: center;
+    /* line-height: 150px; */
+    background-color: rgb(238, 251, 239);
+    /* font-weight: bold; */
+    /* font-size: 3em; */
+    /* text-align: center; */
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 1rem; */
+    /* break-inside: avoid; */
 }
 
 body {
     background-color:  rgb(187, 236, 192);
 }
-
+ ul {
+    list-style: none;
+ }
 img {
-    width: 200px;
+    display: block;
+    width: 75%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    box-shadow: 5px 5px 5px rgb(144, 158, 144);
+}
+
+@media (min-width: 900px) {
+    .flex-container {
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+
 }
